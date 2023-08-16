@@ -1,0 +1,440 @@
+*{
+    font-family: 'Montserrat', sans-serif; 
+    margin: auto 0px;
+}
+
+:root {
+    --colorFondo: rgb(24, 28, 48);
+    --colorTexto: rgb(230, 221, 196);    
+    --colorMenu:  rgb(73, 85, 121);
+    --colorFooter: rgb(103, 137, 131);
+    --colorSombra: rgb(0 ,0 ,0);
+    --colorJuego: rgb(128 128 128);
+    --colorPlay: rgb(173, 255, 47);
+    --colorStop: rgb(255, 165, 0);
+}
+
+body {
+    background-color: var(--colorFondo);
+}
+
+header nav {
+    display:flex;
+    justify-content:space-between;
+    padding: 1rem 0;
+    background: var(--colorFondo);   
+    top: 0;
+    left: 0;
+}
+header nav .links {
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    gap:30px;
+    padding-right: 25px;    
+}
+
+.menu-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: var(--colorTexto);   
+    color: var(--colorSombra);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 8px 6px 0px rgba(0, 0, 0, 0.5);    
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+.menu-button:hover {
+    box-shadow: 8px 6px 0px rgba(0, 0, 0, 0.5);
+    transform: translateY(0);
+}
+  
+.menu-button:active {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(3px);
+}
+
+/**** animacion svg  *****/
+
+.monitor {    
+    animation-iteration-count: 1;
+    animation: bajarmonitor ease-in-out 3s;   
+}
+@keyframes bajarmonitor {
+0% {
+    transform: translateY(-8.1rem);   
+}
+100% {
+    transform: translateY(0px);   
+}
+}
+.pantalla {    
+    animation-iteration-count: 1;
+    animation: bajarpantalla ease-in-out 4s ;   
+}
+@keyframes bajarpantalla {
+0% {
+    transform: translateY(-8.1rem);   
+}
+100% {
+    transform: translateY(0px);    
+}
+}
+.bordeteclado {    
+    animation-iteration-count: 1;
+    animation: verteclado ease-in-out 3s ;   
+}
+@keyframes verteclado {
+0% {
+    transform: translateY(-8.1rem);    
+}
+100% {
+    transform: translateY(0px);  
+}
+}
+.teclado { 
+    animation-iteration-count: 1;
+    animation: bajarteclado ease-in-out 4s ;   
+}
+@keyframes bajarteclado {
+0% {    
+    transform: translateY(-8.1rem);    
+}
+100% {
+    transform: translateY(0px);   
+}
+}
+
+/*****  foto central *****/
+
+main .foto {   
+    position: relative;
+    height: 20rem;
+    padding: 7rem 5rem;
+    background: fixed url(./img/codigo.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.foto h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase; 
+    color: var(--colorTexto);
+    font-size:300%;
+    text-align: center;
+    text-shadow: 2px 2px var(--colorJuego), 6px 6px var(--colorSombra);   
+}
+
+main .contenido {
+    text-align: center;
+}
+main h3 {
+    color: var(--colorFooter);
+    font-size: 250%;
+    text-transform: uppercase;
+    text-shadow: 2px 2px var(--colorSombra), 4px 4px var(--colorSombra);
+}
+
+/**** seccion cards  *****/
+
+.row {
+    margin:8rem;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    width: auto;
+    text-align:center;
+}
+.column {
+   flex: 0 0 25%;
+}
+.card {    
+    position: relative;
+    display: flex;
+    flex-direction:column;    
+    border:  6px solid var(--colorFooter);
+    margin: 1rem;
+    background-color: var(--colorTexto);
+}
+.card:hover {
+    box-shadow: 0 0.4rem 1.8rem rgb(28 28 28 / 12%);
+}
+.card_image img {
+    margin:.1rem .1rem 0;
+    width: 350px;
+}
+.card_content {
+    padding: 1rem;    
+}
+.card-title {
+    color: var(--colorFondo);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+.card-button a {
+    text-align: none;
+    color: var(--colorTexto);
+}
+a:link, a:visited, a:active {
+    text-decoration: none;
+}
+.card button {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--colorFondo);
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 2px 3px var(--colorFooter);
+    text-align: center;
+    color: var(--colorTexto);
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+/****  seccion historia *****/
+.textos {    
+     width: 90%;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: 1fr 1fr;
+     grid-template-areas: "primero segundo"
+                           "tercero cuarto"
+                           "quinto sexto"; 
+     gap: 20px;   
+     justify-items: center;
+     align-items: center;
+}
+ 
+@media(max-width: 800px){
+    .textos {
+     width: 30%;
+     gap:0px;
+     grid-template-columns: 1fr;
+     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+     grid-template-areas: "primero"
+                         "segundo"
+                         "cuarto"
+                         "tercero"
+                         "quinto"
+                         "sexto";
+    }  
+}
+ 
+#parrafo1, #parrafo2, #parrafo3, p {
+     font-size: 17px;
+     text-align: justify;
+     color: var(--colorTexto);
+}
+.textos h3 {
+     text-align: center;
+     text-transform: none;
+} 
+ 
+#titulo1 {
+     grid-area: primero;   
+}
+ 
+#titulo2 {
+     grid-area: cuarto;
+}
+ 
+#titulo3 {
+     grid-area: quinto;
+}
+ 
+#parrafo1 {
+     grid-area: segundo;
+}
+ 
+#parrafo2 {
+     grid-area: tercero;
+}
+ 
+#parrafo3 {
+     grid-area: sexto;
+}
+
+/****   video   *****/
+
+
+.seccion-video {
+    position: relative;    
+    display: flex;   
+    align-items:center;
+    flex-direction: column;
+    
+}
+.seccion-video h3 {
+    text-transform: lowercase;
+    font-size:xx-large;
+}
+
+.screen-video .comando {   
+    display: flex;
+    width: 100%;    
+    padding: 0.8rem 0;
+    background: var(--colorFooter);
+}
+.botones {    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;    
+}
+button {
+    padding: 9px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 4px 2px;
+    box-shadow: 8px 6px 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.boton1 {
+    background-color: var(--colorPlay);    
+}
+
+.boton2 {
+    background-color: var(--colorStop);   
+}
+
+#play, #stop {
+    width: 20px;
+}
+.boton1:hover, .boton2:hover  {
+    box-shadow: 8px 6px 0px rgba(0, 0, 0, 0.5);
+    transform: translateY(0);
+}
+  
+.boton1:active, .boton2:active {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(3px);
+}
+
+.tiempo {
+    color: var(--colorSombra);
+    font-weight: bold;
+    margin-left: auto;
+}
+
+/**** seccion juegos  *****/
+
+.main {
+    padding: 100px 20px;
+    display: block;
+}
+
+.juegos h3 {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.rompecabezas {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+#text {
+    width: 880px;
+    height: 500px;    
+    border: 1px solid var(--colorSombra);
+    margin: auto;
+}
+
+#text, #images {
+    position: relative;
+    display: inline-block;
+    width: 100%;   
+}
+ 
+#text div {    
+    height: 500px;
+    width: 288px;    
+    border: 1px Solid var(--colorSombra);
+    display: inline-block;    
+    position: relative; 
+}
+
+#text div h6 {   
+    display: block;
+    position: absolute;
+    color: var(--colorFooter);
+    font-size: medium;
+    bottom: 233px;
+    left: 34px;
+    padding: 5px;
+    width: 100%;
+}
+
+#div1:hover,  #div2:hover,  #div3:hover {
+    background-color: var(--colorTexto);
+}
+  
+#images {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+}
+
+#images div {   
+    border: 0px dashed var(--colorFondo);    
+} 
+ 
+#drag4 {    
+    background-image: url(./img/rompe2.png);
+    display: inline-block;
+    height: 500px;
+    width: 293px;   
+}
+  
+#drag5 {    
+    background-image: url(./img/rompe1.png);
+    display: inline-block;
+    height: 500px;
+    width: 293px;
+}
+  
+#drag6 {   
+    background-image: url(./img/rompe3.png);
+    display: inline-block;
+    height: 500px;
+    width: 293px;
+}
+
+/****   footer   *****/
+
+footer {    
+    color: var(--colorFondo);
+    background-color: var(--colorFooter); 
+    width: 100%;
+    height: 160px; 
+}
+footer .datosFooter {
+    display: flex;    
+    gap: 100px;
+    padding: 30px;
+}
+h4 {
+    text-transform: uppercase;
+    text-align: center;
+}
+.nombre { margin-left: auto;
+}
+
+.logo {
+    width: 120px;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <title>Proyecto Final</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+<header>
+    <nav>           
+        <a href="./index.html">
+            <svg width="180" height="65">
+                <rect x="45" y="5" width="60" height="35" rx="5" fill="#F0E9D2" class="monitor"></rect>
+                <rect x="50" y="10" width="50" height="25" rx="5" fill="#495579" class="pantalla"></rect>
+                <polygon points="55 45 ,95 45,115 62,30 62" fill="#F0E9D2" class="bordeteclado"></polygon>
+                <polygon points="57 48 ,92 48,104 58,43 58" fill="#495579" class="teclado"></polygon>
+            </svg>
+        </a>     
+            
+        <div class="links">
+            <a href="./historia.html"><button class="menu-button">HISTORIA</button></a>
+            <a href="./juegos.html"><button class="menu-button">JUEGOS</button></a>                     
+        </div>
+    </nav>
+</header>      
+    
+<main>
+    <section class="foto">       
+        <h2>juguemos un poco</h2> 
+    </section>
+    <br>
+    <br>
+    <br>
+        
+    <section class="juegos">
+
+        <h3>Armemos el rompecabezas y veamos que imagen es...</h3>
+       <br>
+        <div class="rompecabezas">
+            <div class="superior">
+                <div id="text">
+                    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><h6>Arrastre y suelte la imágen</h6></div>
+                    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><h6>Arrastre y suelte la imágen</h6></div>
+                    <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"><h6>Arrastre y suelte la imágen</h6></div>        
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <div class="inferior">
+                <div id="images">
+                    <div id="drag4" draggable="true" ondragstart="drag(event)"></div>
+                    <div id="drag5" draggable="true" ondragstart="drag(event)"></div>
+                    <div id="drag6" draggable="true" ondragstart="drag(event)"></div>        
+                </div>
+            </div>
+            <br>
+
+            <button class="menu-button" onclick="reinicio()">Reiniciar</button>
+            
+        </div>
+
+    </section>
+    
+    <br>
+    <br>
+    <br>
+</main>  
+    
+    
+<footer>
+    <div class="datosFooter">
+        <img class="logo" src="./img/logo.png" alt="Logo trabajo final UTN">        
+        <h4>Programacion<br> e<br> historia</h4>
+        <h5 class="nombre">Trabajo final de Cesar Pagliacci UTN</h5>
+    </div>
+</footer>
+
+
+    <script src="./main.js"></script>
+    
+</body>
+</html>
