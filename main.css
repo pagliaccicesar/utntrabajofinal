@@ -19,18 +19,18 @@ body {
 }
 
 header nav {
-    display:flex;
-    justify-content:space-between;
+    display: flex;
+    justify-content: space-between;
     padding: 1rem 0;
     background: var(--colorFondo);   
     top: 0;
     left: 0;
 }
 header nav .links {
-    display:flex;
+    display: flex;
     flex-direction: row;
-    justify-content:space-between;
-    gap:30px;
+    justify-content: space-between;
+    gap: 30px;
     padding-right: 25px;    
 }
 
@@ -53,7 +53,8 @@ header nav .links {
   
 .menu-button:active {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    transform: translateY(3px);
+    transform: translate(3px, 2px);
+    
 }
 
 /**** animacion svg  *****/
@@ -107,7 +108,7 @@ header nav .links {
 }
 }
 
-/*****  foto central *****/
+/*****  foto central inicio*****/
 
 main .foto {   
     position: relative;
@@ -141,15 +142,15 @@ main h3 {
     text-shadow: 2px 2px var(--colorSombra), 4px 4px var(--colorSombra);
 }
 
-/**** seccion cards  *****/
+/**** seccion cards inicio *****/
 
 .row {
-    margin:8rem;
+    margin: 8rem;
     display: flex;
     flex-wrap:wrap;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     width: auto;
-    text-align:center;
+    text-align: center;
 }
 .column {
    flex: 0 0 25%;
@@ -157,19 +158,21 @@ main h3 {
 .card {    
     position: relative;
     display: flex;
-    flex-direction:column;    
-    border:  6px solid var(--colorFooter);
+    flex-direction: column;
+    justify-content:space-between;
+    width: 350px;    
+    border: 6px solid var(--colorFooter);
     margin: 1rem;
     background-color: var(--colorTexto);
 }
-.card:hover {
-    box-shadow: 0 0.4rem 1.8rem rgb(28 28 28 / 12%);
-}
-.card_image img {
-    margin:.1rem .1rem 0;
-    width: 350px;
+
+.card_image img {        
+    width: 100%;
+    height: auto;
+    margin: 0px;
 }
 .card_content {
+    margin-top: 18px;
     padding: 1rem;    
 }
 .card-title {
@@ -177,7 +180,7 @@ main h3 {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
 }
-.card-button a {
+.card-button a {    
     text-align: none;
     color: var(--colorTexto);
 }
@@ -185,11 +188,12 @@ a:link, a:visited, a:active {
     text-decoration: none;
 }
 .card button {
+    margin-top: 18px;
     padding: 10px;
     border-radius: 10px;
     background-color: var(--colorFondo);
     font-family: Arial, Helvetica, sans-serif;
-    box-shadow: 2px 3px var(--colorFooter);
+    box-shadow: 2px 3px var(--colorFooter);   
     text-align: center;
     color: var(--colorTexto);
     width: 40%;
@@ -197,7 +201,8 @@ a:link, a:visited, a:active {
 }
 
 /****  seccion historia *****/
-.textos {    
+.textos {  
+     margin-top: 40px;  
      width: 90%;
      display: block;
      margin-left: auto;
@@ -266,14 +271,15 @@ a:link, a:visited, a:active {
 
 
 .seccion-video {
+    margin-top: 130px;
     position: relative;    
     display: flex;   
     align-items:center;
     flex-direction: column;
     
 }
-.seccion-video h3 {
-    text-transform: lowercase;
+.seccion-video h3 { 
+    text-transform: none; 
     font-size:xx-large;
 }
 
@@ -335,6 +341,10 @@ button {
     display: block;
 }
 
+.juegos {
+    margin-top: 50px;
+}
+
 .juegos h3 {
     text-align: center;
     font-size: xx-large;
@@ -371,15 +381,20 @@ button {
     display: block;
     position: absolute;
     color: var(--colorFooter);
-    font-size: medium;
-    bottom: 233px;
-    left: 34px;
+    font-size: small;
+    top: 220px;    
+    left: 59px;
     padding: 5px;
     width: 100%;
+    z-index: 0;
 }
 
 #div1:hover,  #div2:hover,  #div3:hover {
     background-color: var(--colorTexto);
+}
+
+.inferior {
+    padding-top: 15px;
 }
   
 #images {
@@ -405,19 +420,20 @@ button {
     background-image: url(./img/rompe1.png);
     display: inline-block;
     height: 500px;
-    width: 293px;
+    width: 293px;  
 }
   
 #drag6 {   
     background-image: url(./img/rompe3.png);
     display: inline-block;
     height: 500px;
-    width: 293px;
+    width: 293px;     
 }
 
 /****   footer   *****/
 
-footer {    
+footer {
+    margin-top: 140px;  
     color: var(--colorFondo);
     background-color: var(--colorFooter); 
     width: 100%;
@@ -432,7 +448,8 @@ h4 {
     text-transform: uppercase;
     text-align: center;
 }
-.nombre { margin-left: auto;
+.nombre {
+    margin-left: auto;    
 }
 
 .logo {
