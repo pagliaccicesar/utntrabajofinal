@@ -346,6 +346,7 @@ button {
 }
 
 .juegos h3 {
+    text-transform: none;
     text-align: center;
     font-size: xx-large;
 }
