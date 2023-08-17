@@ -374,7 +374,7 @@ button {
     width: 288px;    
     border: 1px Solid var(--colorSombra);
     display: inline-block;    
-    position: relative; 
+    position: relative;    
 }
 
 #text div h6 {   
@@ -383,10 +383,9 @@ button {
     color: var(--colorFooter);
     font-size: small;
     top: 220px;    
-    left: 59px;
+    left: 95px;
     padding: 5px;
-    width: 100%;
-    z-index: 0;
+    width: 100%;   
 }
 
 #div1:hover,  #div2:hover,  #div3:hover {

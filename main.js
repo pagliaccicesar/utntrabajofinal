@@ -29,22 +29,34 @@ const pausar=()=>{
         
 
 
-// rompecabezas //
+// rompecabezas de juegos //
+
 function allowDrop(ev) {
     ev.preventDefault();
 }
-
-function drag(ev) {    
+  
+function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
+    const leyenda1 = document.getElementById("leyenda1");
+    leyenda1.style.display = "none";
+    const leyenda2 = document.getElementById("leyenda2");
+    leyenda2.style.display = "none";
+    const leyenda3 = document.getElementById("leyenda3");
+    leyenda3.style.display = "none";
 }
-
+  
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-
+    ev.target.appendChild(document.getElementById(data));   
 }
-
+  
 function reinicio() {
-window.location.reload();
-}
+    window.location.reload();
+}  
+
+
+  
+
+
+
